@@ -12,11 +12,11 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: darwin-latest
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-2016]
+        os: [darwin-latest]
         node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
@@ -32,11 +32,11 @@ jobs:
           path: public/
   test:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: darwin-latest
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-2016]
+        os: [darwin-latest]
         node-version: [18.x]
 
     steps:
