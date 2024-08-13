@@ -12,11 +12,11 @@ on:
 jobs:
   build:
 
-    runs-on: darwin-latest
+    runs-on: macos-latest
 
     strategy:
       matrix:
-        os: [darwin-latest]
+        os: [macos-latest]
         node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
@@ -32,11 +32,11 @@ jobs:
           path: public/
   test:
     needs: build
-    runs-on: darwin-latest
+    runs-on: macos-latest
 
     strategy:
       matrix:
-        os: [darwin-latest]
+        os: [macos-latest]
         node-version: [18.x]
 
     steps:
