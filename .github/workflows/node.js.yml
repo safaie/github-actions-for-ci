@@ -12,12 +12,12 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-2016]
-        node-version: [12.x, 14.x]
+        os: [macos-latest]
+        node-version: [20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -32,12 +32,12 @@ jobs:
           path: public/
   test:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-2016]
-        node-version: [12.x, 14.x]
+        os: [macos-latest]
+        node-version: [20.x]
 
     steps:
     - uses: actions/checkout@v2
